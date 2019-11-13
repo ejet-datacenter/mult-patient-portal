@@ -1,10 +1,10 @@
 <template>
   <div class="content" v-loading="loading">
     <el-container class="content">
-      <el-header style="height:40px;padding:0">
+      <el-header style="height:60px;padding:0">
         <div class="search">
           <i class="el-icon-zoom-in" style="font-size: 24px;color:#fff;vertical-align: middle;"></i>
-          <span style="font-size: 16px;color: #fff;">患者检索</span>
+          <span style="font-size: 18px;color: #fff;">患者检索</span>
           <div v-on:click.prev.stop="searchShow=true" style="display: inline-block;">
             <el-input v-model="form.queryKeywords" placeholder="姓名/(住院、门诊)号/床位号" clearable size="small"
                       v-on:input="querytable"></el-input>
@@ -44,18 +44,18 @@
             </div>
             <div class="info">
               <p>
-                <span>姓名:{{baseInfo.name}}</span>
-                <span>生日:{{baseInfo.birthday}}</span>
-                <span>性别:{{baseInfo.sexName}}</span>
-                <span>年龄:{{baseInfo.age}}</span>
-                <span>婚姻:{{baseInfo.marriageStateName}}</span>
-                <span>名族:{{baseInfo.nationName}}</span>
+                <span>姓名：{{baseInfo.name}}</span>
+                <span>生日：{{baseInfo.birthday}}</span>
+                <span>性别：{{baseInfo.sexName}}</span>
+                <span>年龄：{{baseInfo.age}}</span>
+                <span>婚姻：{{baseInfo.marriageStateName}}</span>
+                <span>名族：{{baseInfo.nationName}}</span>
               </p>
-              <p style="font-size: 12px;">
-                <span>医保类型:{{baseInfo.marriageStateName}}</span>
-                <span>身份证:{{baseInfo.idCard}}</span>
-                <span><i class="fa fa-phone-square"></i> 电话:{{baseInfo.phone}}</span>
-                <span><i class="fa fa-address-book"></i> 住址:{{baseInfo.countryName}}{{baseInfo.addrProvince}}{{baseInfo.addrCity}}{{baseInfo.addrArea}}{{baseInfo.addrDetail}}</span>
+              <p>
+                <span>医保类型：{{baseInfo.marriageStateName}}</span>
+                <span>身份证：{{baseInfo.idCard}}</span>
+                <span><i class="fa fa-phone-square"></i> 电话：{{baseInfo.phone}}</span>
+                <span><i class="fa fa-address-book"></i> 住址：{{baseInfo.countryName}}{{baseInfo.addrProvince}}{{baseInfo.addrCity}}{{baseInfo.addrArea}}{{baseInfo.addrDetail}}</span>
               </p>
             </div>
           </div>
@@ -381,8 +381,8 @@
     position: relative;
     padding-left: 15px;
     z-index: 1;
-    height: 40px;
-    line-height: 40px;
+    height: 60px;
+    line-height: 60px;
     top: 0
   }
 
@@ -392,19 +392,19 @@
     width: 720px;
     height: 400px;
     background: #fff;
-    top: 40px;
-    left: 110px;
+    top: 60px;
+    left: 120px;
     z-index: 999;
-    padding: 5px;
+    padding: 20px;
     box-shadow: 1px 1px 10px 2px #6f7180;
   }
 
   .head {
-    height: 40px;
-    line-height: 40px;
+    height: 60px;
+    line-height: 60px;
     width: 100%;
     color: #fff;
-    font-size: 16px;
+    font-size: 22px;
     background: #409EFF;
     position: absolute;
     top: 0;
@@ -428,15 +428,21 @@
   }
 
   .el-aside {
-    border-top: 1px solid #ccc
+    border-top: 0px solid #ccc;
+    font-size: 18px;
+  }
+  .el-aside .el-menu-item {
+
+    font-size: 16px;
   }
 
   .el-submenu {
-    border-bottom: 1px solid #ccc
+    border-bottom: 1px solid #ccc;
+
   }
 
   .baseInfo {
-    height: 50px;
+    height: 60px;
     /*margin-top: 40px;*/
     margin-bottom: 5px;
     background: #fff;
@@ -449,9 +455,9 @@
     background: #ccc;
     border-radius: 5px 5px 0 0;
     text-align: center;
-    height: 40px;
+    height: 50px;
     font-size: 32px;
-    line-height: 40px;
+    line-height: 50px;
   }
 
   .baseInfo .img img {
@@ -462,35 +468,36 @@
 
   .baseInfo .info {
     float: left;
-    height: 50px;
-    line-height: 25px;
+    height: 60px;
+    line-height: 30px;
     padding-left: 10px;
     padding-right: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: calc(100% - 100px);
+    font-size: 14px;
   }
 
   .baseInfo .info p {
     font-weight: 500;
-    height: 25px;
+    height: 30px;
     font-size: 14px;
   }
 
   .baseInfo .info span {
     float: left;
-    height: 25px;
+    height: 30px;
     display: block;
     padding-right: 20px;
-    min-width: 100px;
+    min-width: 120px;
   }
 
   .timeAxis {
-    height: 280px;
+    height: 380px;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 20px 10px;
     overflow: hidden;
     background: #fff;
   }
